@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The96ers - Desenvolvimento Pessoal e Profissional">
+  <meta name="author" content="Jackson Santos">
+  <meta name="keywords" content="desenvolvimento pessoal, educação, tecnologia, The96ers, crescimento profissional">
   <title>The96ers</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/rocket.png" type="image/png">
+  <!-- Biblioteca AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Cabeçalho com menu -->
+  <!-- Cabeçalho -->
   <header>
     <nav>
       <h1 class="logo">The96ers</h1>
@@ -23,31 +28,42 @@
 
   <!-- Seção Home -->
   <section id="home" class="hero">
-    <h2>Bem-vindo à The96ers</h2>
-    <p>Um lugar onde pessoas buscam desenvolvimento pessoal e profissional.</p>
-    <a href="#contato" class="btn">Fale Conosco</a>
+    <h2 data-aos="fade-down">Bem-vindo à The96ers</h2>
+    <p data-aos="fade-up">Um lugar onde pessoas buscam desenvolvimento pessoal e profissional.</p>
+    <a href="#contato" class="btn" data-aos="zoom-in">Fale Conosco</a>
   </section>
 
   <!-- Seção Quem Somos -->
   <section id="sobre">
-    <h2>Quem Somos</h2>
-    <p>A The96ers é uma empresa que busca ajudar pessoas a desenvolver novas habilidades,
-    unindo crescimento pessoal e profissional para criar oportunidades e transformações.</p>
+    <h2 data-aos="fade-up">Quem Somos</h2>
+    <p data-aos="fade-right">
+      A <strong>The96ers</strong> nasceu com o propósito de transformar vidas por meio da educação e do
+      desenvolvimento humano. Nossa missão é inspirar pessoas a alcançarem seu potencial máximo,
+      unindo tecnologia, conhecimento e valores humanos.
+    </p>
+    <ul data-aos="fade-left">
+      <li><strong>Visão:</strong> Ser referência em educação e inovação, impactando positivamente a vida de milhares de pessoas.</li>
+      <li><strong>Missão:</strong> Oferecer recursos, conteúdos e mentorias que gerem crescimento pessoal e profissional.</li>
+      <li><strong>Valores:</strong> Ética, compromisso, inovação e empatia.</li>
+    </ul>
   </section>
 
   <!-- Seção Serviços -->
   <section id="servicos">
-    <h2>O que Fazemos</h2>
+    <h2 data-aos="fade-up">O que Fazemos</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" data-aos="flip-left">
+        <img src="https://img.icons8.com/color/96/000000/teacher.png" alt="Mentoria">
         <h3>Mentoria</h3>
         <p>Acompanhamento personalizado para seu desenvolvimento.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="flip-left">
+        <img src="https://img.icons8.com/color/96/000000/book.png" alt="Conteúdo Educativo">
         <h3>Conteúdo Educativo</h3>
         <p>Produção de artigos, cursos e workshops.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="flip-left">
+        <img src="https://img.icons8.com/color/96/000000/conference.png" alt="Comunidade">
         <h3>Comunidade</h3>
         <p>Um espaço de troca e aprendizado coletivo.</p>
       </div>
@@ -56,14 +72,32 @@
 
   <!-- Seção Contato -->
   <section id="contato">
-    <h2>Contato</h2>
-    <p>📧 Email: <a href="mailto:seuemail@gmail.com">seuemail@gmail.com</a></p>
-    <p>📱 Instagram: <a href="https://instagram.com">/the96ers</a></p>
+    <h2 data-aos="fade-up">Contato</h2>
+    <form action="https://formspree.io/f/mzzbrrrq" method="POST" data-aos="zoom-in">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>Email: <a href="mailto:jacksousasts@gmail.com">jacksousasts@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/jackson9.6">@jackson9.6</a></p>
   </section>
 
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 The96ers - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="https://instagram.com/jackson9.6"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="mailto:jacksousasts@gmail.com"><img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email"></a>
+      <a href="#"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="topo">⬆ Voltar ao topo</button>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
