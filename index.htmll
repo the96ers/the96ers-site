@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The96ers - Desenvolvimento Pessoal e Profissional">
+  <title>The96ers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho com menu -->
+  <header>
+    <nav>
+      <h1 class="logo">The96ers</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Home -->
+  <section id="home" class="hero">
+    <h2>Bem-vindo à The96ers</h2>
+    <p>Um lugar onde pessoas buscam desenvolvimento pessoal e profissional.</p>
+    <a href="#contato" class="btn">Fale Conosco</a>
+  </section>
+
+  <!-- Seção Quem Somos -->
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>A The96ers é uma empresa que busca ajudar pessoas a desenvolver novas habilidades,
+    unindo crescimento pessoal e profissional para criar oportunidades e transformações.</p>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos">
+    <h2>O que Fazemos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Mentoria</h3>
+        <p>Acompanhamento personalizado para seu desenvolvimento.</p>
+      </div>
+      <div class="card">
+        <h3>Conteúdo Educativo</h3>
+        <p>Produção de artigos, cursos e workshops.</p>
+      </div>
+      <div class="card">
+        <h3>Comunidade</h3>
+        <p>Um espaço de troca e aprendizado coletivo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📧 Email: <a href="mailto:seuemail@gmail.com">seuemail@gmail.com</a></p>
+    <p>📱 Instagram: <a href="https://instagram.com">/the96ers</a></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 The96ers - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
