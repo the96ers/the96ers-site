@@ -5,21 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The96ers</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
     }
     nav {
-      background-color: #0047AB;
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
       padding: 15px 20px;
       display: flex;
       justify-content: center;
       gap: 30px;
-      flex-wrap: wrap;
+      z-index: 1000;
     }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
@@ -29,17 +40,51 @@
       color: #FFD700;
       text-decoration: underline;
     }
+    header {
+      background: url('https://images.unsplash.com/photo-1581092580496-4790e0db7f06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 48px;
+      z-index: 1;
+    }
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      z-index: 1;
+    }
     section {
-      padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
       background-color: white;
-      margin-top: 20px;
+      margin-top: 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #333;
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #0047AB;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -53,19 +98,21 @@
     <a href="#artigos">Artigos e Notas</a>
   </nav>
 
-  <section id="home">
-    <h1>Bem-vindo ao The96ers</h1>
-    <p>Um lugar onde pessoas buscam desenvolvimento pessoal e profissional.</p>
-  </section>
+  <header id="home">
+    <div>
+      <h1>Bem-vindo ao The96ers</h1>
+      <p>Inovação, Conhecimento e Crescimento Pessoal</p>
+    </div>
+  </header>
 
   <section id="quem-somos">
     <h2>Quem Somos</h2>
-    <p>Somos uma equipe dedicada a oferecer conhecimento e ferramentas para seu crescimento.</p>
+    <p>Somos uma equipe dedicada a transformar conhecimento em oportunidades, conectando pessoas e ideias.</p>
   </section>
 
   <section id="servicos">
     <h2>Serviços</h2>
-    <p>Oferecemos consultoria, cursos e conteúdos especializados.</p>
+    <p>Oferecemos consultoria, mentorias, cursos e produção de conteúdo especializado para o seu desenvolvimento.</p>
   </section>
 
   <section id="contato">
@@ -76,8 +123,21 @@
 
   <section id="artigos">
     <h2>Artigos e Notas</h2>
-    <p>Aqui você encontrará textos e análises produzidos por nossa equipe.</p>
+    <p>Aqui você encontrará textos, análises e reflexões produzidas pela nossa equipe.</p>
   </section>
 
+  <script>
+    // Aparecer as seções ao rolar
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) {
+          sec.classList.add("visible");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
